@@ -1,0 +1,33 @@
+execution:
+  groups:
+    - name: registry
+      path: file://python2.7:python
+      args: "extract.py"
+      devices:
+      - name: input
+      - name: python2.7
+      - name: stdout
+
+meta:
+  Version: "0.1"
+  name: "registry"
+  author: Martin Geisler
+  email: martin@geisler.net
+  Summary: >
+    
+    This is a simple app that will list zapps found in the "apps"
+    container.
+
+help:
+  description: ""
+  args: []
+
+bundling:
+  - extract.py
+  - yaml/*.py
+
+ui:
+  - "*.html"
+  - "*.tmpl"
+  - "*.css"
+  - "*.js"
